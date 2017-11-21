@@ -27,10 +27,6 @@ def main():
   result = dict()
   result["changed"] = True
 
-  # This is how you fetch parameters
-  name = module.params['name']
-  scores = module.params['scores']
-
   module.exit_json(**result)
 
 if __name__ == '__main__':
