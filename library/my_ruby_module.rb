@@ -16,4 +16,4 @@ end
 # This is how you fetch parameters
 params["name"]
 
-puts ({ change: true, params: params }).to_json
+puts ({ changed: true, params: params }).to_json
