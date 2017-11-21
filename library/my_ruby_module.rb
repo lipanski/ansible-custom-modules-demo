@@ -2,11 +2,18 @@
 
 require "json"
 
-result = { changed: true }
+params = {}
 
-args_file = ARGV[0]
-data = File.read(args_file)
-args = data.split(" ")
+arguments = File.read(ARGV[0])
+arguments.split(" ").each do |argument|
+  key, value = argument.split("=")
 
-puts result.to_json
-#exit 0
+  next unless key && value
+
+  params[key] = value
+end
+
+# This is how you fetch parameters
+params["name"]
+
+puts ({ change: true, params: params }).to_json
