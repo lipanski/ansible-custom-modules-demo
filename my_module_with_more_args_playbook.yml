@@ -1,0 +1,4 @@
+- hosts: localhost
+  connection: local
+  tasks:
+  - my_module_with_more_args: name="florin" scores="{{ [1, 2, 3] }}"

@@ -12,6 +12,15 @@ def main():
 
   module = AnsibleModule(
     argument_spec=argument_spec,
+    required_together=[
+      ['name', 'scores'],
+    ],
+    required_one_of=[
+      ['state', 'options']
+    ],
+    mutually_exclusive=[
+      ['name', 'options']
+    ],
     supports_check_mode=False
   )
 
