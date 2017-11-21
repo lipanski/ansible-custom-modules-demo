@@ -1,0 +1,6 @@
+- hosts: localhost
+  connection: local
+  tasks:
+  - my_module:
+    register: result
+  - debug: var=result
