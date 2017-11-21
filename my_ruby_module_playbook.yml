@@ -1,0 +1,4 @@
+- hosts: localhost
+  connection: local
+  tasks:
+  - my_ruby_module: name="florin" scores="{{ [1, 2, 3] }}"
